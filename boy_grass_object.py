@@ -54,7 +54,7 @@ class Ball:
 
 class Boy:
     def __init__(self):
-            self.x = random.randint(100, 700)
+            self.x = random.randint(50, 750)
             self.y = 90
             self.frame = 0
             self.image = load_image('run_animation.png')
