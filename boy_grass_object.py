@@ -28,10 +28,10 @@ class Grass:
 
 class Ball:
     def __init__(self):
-        self.x, self.y = random.randint(100, 700),0
+        self.x, self.y = random.randint(50, 750),0
         self.image = load_image('ball21x21.png')
         self.speed = random.randint(1, 5)
-        self.size =  random.randint(1, 3)
+        self.size =  random.randint(1, 4)
         self.check = True
     def update(self):
         if self.check:
