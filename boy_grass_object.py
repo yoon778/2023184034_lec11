@@ -26,7 +26,8 @@ class Grass:
     def update(self): pass
 
 
-
+class Ball:
+    pass
 
 class Boy:
     def __init__(self):
