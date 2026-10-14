@@ -29,12 +29,22 @@ class Grass:
 class Ball:
     def __init__(self):
         self.x, self.y = random.randint(100, 700),90
-        self.image = load_image('ball41x41.png')
+        self.image = load_image('ball21x21.png')
         self.speed = random.randint(1, 5)
         self.size =  random.randint(1, 3)
+        self.check = True
     def update(self):
-        if self.y < 600:
-            self.y += self.speed
+        if self.check:
+            if self.y < 600:
+                self.y += self.speed
+            elif self.y == 600:
+                self.check = False
+        else:
+            if self.y >550:
+                self.y -= self.speed
+            else:
+                self.check = True
+         
     def draw(self):
         frame_width = self.image.w * self.size
         frame_height = self.image.h* self.size
