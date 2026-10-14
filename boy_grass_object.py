@@ -32,7 +32,7 @@ class Ball:
         self.image = load_image('ball21x21.png')
         self.speed = random.randint(1, 5)
     def update(self):
-        pass
+        self.y += self.speed
     def draw(self):
         frame_width = self.image.w
         frame_height = self.image.h
